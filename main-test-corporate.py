@@ -53,12 +53,20 @@ def create_directory(dirname,file_system_client):
 # Press the green button in the gutter to run the script.
 
 if __name__ == '__main__':
-    storage_account_name="myacc001"
-    storage_account_key ="Pmx6Ii7ZdpanSBHoi2nrePGSlZ+smBUBrq6mwaKShGa24uwIrYTuoJVwyDNCGrccgVzBX2A+H4dD+AStxE8Dcg=="
+    storage_account_name="main-test-mine.py"
+    storage_account_key ="fSKV+Dk0n4wxNa/CaJhuA9VVe1ip7C68FscYWZtpjtLoYUJrk8ymf/mE0Sjz1ID1dnUnYJfdej68JorqMSLt+w=="
     service_client = initialize_storage_account(storage_account_name,storage_account_key)
 
-    for i in range(3):
-        service_client.create_file_system("aaaaaa{}".format(str(i)))
+    file_system_client = service_client.get_file_system_client("pointclouds")
+    paths = file_system_client.get_paths(path="senbahiroba")
+    for path in paths:
+        print(path.name + '\n')
+    # dir_client = file_system_client.get_directory_client("senbahiroba")
+    # temp1 = dir_client.get_directory_properties()
+
+    d=1
+    # for i in range(3):
+    #     service_client.create_file_system("aaaaaa{}".format(str(i)))
 
 
 

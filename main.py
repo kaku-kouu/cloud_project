@@ -50,9 +50,12 @@ if __name__ == '__main__':
 
     root1=source_client.get_file_system_client("pointclouds")
 
-    dirs1 = list(root1.get_paths())
+    # dirs1 = list(root1.get_paths())
 
     fsystems = source_client.list_file_systems()
+    for  i in range(5):
+
+        out_client.create_file_system(str(i))
     # for fs in fsystems:
     #     print(fsystems.name)
 
