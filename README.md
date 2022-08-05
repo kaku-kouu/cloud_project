@@ -18,4 +18,4 @@ python process_original_files.py
 
 
 
-based on paper : https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13910},
+based on paper : https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.13910
