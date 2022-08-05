@@ -9,3 +9,4 @@ executable2/
 main_old.py
 exchange_between_datastores.py
 analize_output.py
+*aml*
